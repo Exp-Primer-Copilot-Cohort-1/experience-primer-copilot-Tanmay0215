@@ -1,3 +1,4 @@
+// Create web server
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -6,7 +7,7 @@ const path = require('path');
 const commentsPath = path.join(__dirname, 'comments.json');
 const comments = require('./comments.json');
 
-app.use(express.static('public'));
+app.use(express.static('public'));  
 app.use(bodyParser.json());
 
 // get all comments
